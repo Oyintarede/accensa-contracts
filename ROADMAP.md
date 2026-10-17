@@ -117,6 +117,12 @@
 
 - [x] `apply_decay` guards `SCORE_FLOOR + decayed` with `checked_add` and states the precondition that keeps the sum in range (#724)
 
+## Issue #723: guard `recall_principal`'s sums against overflow
+
+- [x] Route both `recall_principal` sums through `add_amounts` (#723)
+  - `contracts/refund-vault/src/strategy.rs` — typed `Error::MathOverflow` instead of a host abort
+  - `contracts/refund-vault/src/recall_principal_overflow_tests.rs` — boundary tests drive both sums to `i128::MAX`
+
 ## Issue #779: rustdoc for `ShardCreatedEvent`'s 5 exported fields
 
 - [x] Document `shard_id`, `shard_index`, `shard_address`, `start_batch_id` and `end_batch_id` (#779)
