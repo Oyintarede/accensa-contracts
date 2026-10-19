@@ -197,3 +197,8 @@
 
 - [x] Add `///` rustdoc to `MultiAssetChannelOpenedEvent`, `MultiAssetSettledEvent`, `open` and `get` (#751)
   - `contracts/state-channel/src/multi_asset.rs` — doc comments only; role, pre-conditions and each `Error` arm documented, signatures and bodies unchanged
+
+## Issue #776: Document the public fields of `PrunePayload`
+
+- [x] Add `///` rustdoc to `schema_version`, `timestamp`, `shard_id`, `start_batch_id` and `end_batch_id` (#776)
+  - `contracts/receipt-anchor/src/events.rs` — one doc line per field stating its domain and the `prune_batches` call site that writes it; field/type/order/derives unchanged
