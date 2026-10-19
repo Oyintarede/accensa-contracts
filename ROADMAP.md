@@ -156,3 +156,9 @@
 
 - [x] Point the supported-versions table at the 0.3.x release line (#661)
   - `SECURITY.md` — supported and unsupported version rows; the 0.1.0 testnet note is unchanged
+
+## Issue #777: Add /// to BatchRecord's exported fields
+
+- [x] Add `///` doc comments to `BatchRecord`'s five exported fields (#777)
+  - Documented `root`, `count`, `period_start`, `period_end`, and `anchored_ledger` in `contracts/receipt-anchor/src/lib.rs`
+  - Verified `cargo fmt --all -- --check`, `cargo clippy --locked --all-targets -- -D warnings`, `cargo test --locked --workspace`, and rustdoc rendering
