@@ -162,3 +162,17 @@
 - [x] Add `///` doc comments to `BatchRecord`'s five exported fields (#777)
   - Documented `root`, `count`, `period_start`, `period_end`, and `anchored_ledger` in `contracts/receipt-anchor/src/lib.rs`
   - Verified `cargo fmt --all -- --check`, `cargo clippy --locked --all-targets -- -D warnings`, `cargo test --locked --workspace`, and rustdoc rendering
+## Issue #787: rustdoc for `ChannelOpenedEvent`'s 5 public fields
+
+- [x] Document the struct's 5 public fields (#787)
+  - `contracts/state-channel/src/lib.rs` — doc comments only, no signature, body, order or derive changes
+
+## Issue #788: rustdoc for `MultiAssetChannel`'s 5 public fields
+
+- [x] Document `sender`, `receiver`, `phase`, `opened_at` and `challenge_period` (#788)
+  - `contracts/state-channel/src/multi_asset.rs` — doc comments only, field/type/order/derives unchanged
+
+## Issue #792: rustdoc for `AuthorizeEvent`'s 5 public fields
+
+- [x] Document `payment_id`, `from`, `to`, `cap` and `expiry` (#792)
+  - `contracts/upto-authorization/src/lib.rs` — doc comments only, field/type/order/derives unchanged
